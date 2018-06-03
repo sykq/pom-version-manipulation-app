@@ -21,3 +21,13 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+*.svn-base
+.settings/org.eclipse.jdt.core.prefs
+.svn/entries
+.svn/wc.db
+.svn/
+
+target/
+.classpath
+*.project
+.settings/org.eclipse.m2e.core.prefs
