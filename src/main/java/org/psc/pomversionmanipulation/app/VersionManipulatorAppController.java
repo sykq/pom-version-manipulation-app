@@ -58,6 +58,13 @@ public class VersionManipulatorAppController implements Initializable {
 		directoryView.setEditable(true);
 		// directoryView.setCellFactory(PomPathCheckBoxTreeCell.forTreeView());
 		directoryView.setCellFactory(e -> new PomPathCheckBoxTreeCell());
+		directoryView.setOnMouseClicked(event -> {
+			if (event.getClickCount() == 2) {
+				CheckBoxTreeItem<PomPath> item = (CheckBoxTreeItem<PomPath>) directoryView.getSelectionModel()
+						.getSelectedItem();
+				item.setSelected(!item.isSelected());
+			}
+		});
 	}
 
 	@FXML
