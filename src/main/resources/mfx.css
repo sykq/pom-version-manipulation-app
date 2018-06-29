@@ -829,3 +829,7 @@
 .toolbar-colored .text {
 	-fx-fill: white;
 }
+
+.split-pane {
+	-fx-box-border: transparent;
+}

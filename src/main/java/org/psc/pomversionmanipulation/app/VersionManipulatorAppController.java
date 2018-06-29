@@ -29,6 +29,8 @@ import javafx.scene.control.CheckBoxTreeItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.CheckBoxTreeCell;
 import javafx.stage.DirectoryChooser;
@@ -51,6 +53,12 @@ public class VersionManipulatorAppController implements Initializable {
 	@FXML
 	private Label rootDirectoryLabel;
 
+	@FXML
+	private TextField sourceVersion;
+
+	@FXML
+	private Tooltip sourceVersionTooltip;
+
 	private Path rootPath;
 
 	@Override
@@ -65,6 +73,7 @@ public class VersionManipulatorAppController implements Initializable {
 				item.setSelected(!item.isSelected());
 			}
 		});
+		sourceVersion.setTooltip(sourceVersionTooltip);
 	}
 
 	@FXML
